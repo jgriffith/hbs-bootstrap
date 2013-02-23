@@ -662,6 +662,12 @@ cite {
   font-style: normal;
 }
 
+b,
+strong {
+  font-family: 'Trade Gothic W01 Bold 2', Arial, Helvetica, Verdana, sans-serif;
+  font-weight: normal;
+}
+
 .muted {
   color: #999999;
 }
@@ -845,7 +851,8 @@ dd {
 }
 
 dt {
-  font-weight: bold;
+  font-family: 'Trade Gothic W01 Bold 2', Arial, Helvetica, Verdana, sans-serif;
+  font-weight: normal;
 }
 
 dd {
@@ -1108,12 +1115,8 @@ input[type="search"],
 input[type="tel"],
 input[type="color"],
 .uneditable-input {
-  background-color: #ffffff;
+  background-color: #eeeeee;
   border: 1px solid #cccccc;
-  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
-     -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
-       -o-transition: border linear 0.2s, box-shadow linear 0.2s;
-          transition: border linear 0.2s, box-shadow linear 0.2s;
 }
 
 textarea:focus,
@@ -1132,11 +1135,10 @@ input[type="search"]:focus,
 input[type="tel"]:focus,
 input[type="color"]:focus,
 .uneditable-input:focus {
-  border-color: rgba(82, 168, 236, 0.8);
+  background-color: #ffffff;
+  border-color: black;
   outline: 0;
   outline: thin dotted \9;
-  /* IE6-9 */
-
 }
 
 input[type="radio"],
@@ -1170,7 +1172,7 @@ input[type="file"] {
 
 select {
   width: 220px;
-  background-color: #ffffff;
+  background-color: #eeeeee;
   border: 1px solid #cccccc;
 }
 
@@ -1192,7 +1194,7 @@ input[type="checkbox"]:focus {
 .uneditable-textarea {
   color: #999999;
   cursor: not-allowed;
-  background-color: #fcfcfc;
+  background-color: #d5d5d5;
   border-color: #cccccc;
 }
 
@@ -1859,6 +1861,7 @@ table {
 .table th,
 .table td {
   padding: 8px;
+  font-size: 13px;
   line-height: 24px;
   text-align: left;
   vertical-align: top;
@@ -1866,7 +1869,8 @@ table {
 }
 
 .table th {
-  font-weight: bold;
+  font-family: 'Trade Gothic W01 Bold 2', Arial, Helvetica, Verdana, sans-serif;
+  font-weight: normal;
 }
 
 .table thead th {
@@ -2059,7 +2063,7 @@ table th[class*="span"],
   display: inline-block;
   width: 14px;
   height: 14px;
-  margin-top: 1px;
+  margin-top: 3px;
   *margin-right: .3em;
   line-height: 14px;
   vertical-align: text-top;
@@ -2778,7 +2782,7 @@ table th[class*="span"],
 .dropup .caret,
 .navbar-fixed-bottom .dropdown .caret {
   border-top: 0;
-  border-bottom: 4px solid #000000;
+  border-bottom: 4px solid #ffffff;
   content: "";
 }
 
@@ -2816,7 +2820,7 @@ table th[class*="span"],
   float: right;
   width: 0;
   height: 0;
-  margin-top: 5px;
+  margin-top: 7px;
   margin-right: -10px;
   border-color: transparent;
   border-left-color: #cccccc;
@@ -2897,13 +2901,11 @@ table th[class*="span"],
 
 .close {
   float: right;
-  font-size: 20px;
+  font-size: 17px;
   font-weight: bold;
   line-height: 24px;
-  color: #000000;
+  color: #a41034;
   text-shadow: 0 1px 0 #ffffff;
-  opacity: 0.2;
-  filter: alpha(opacity=20);
 }
 
 .close:hover,
@@ -2911,8 +2913,6 @@ table th[class*="span"],
   color: #000000;
   text-decoration: none;
   cursor: pointer;
-  opacity: 0.4;
-  filter: alpha(opacity=40);
 }
 
 button.close {
@@ -2999,6 +2999,11 @@ button.close {
   filter: alpha(opacity=65);
 }
 
+.btn [class^="icon-"],
+.btn [class*=" icon-"] {
+  margin-top: 1px;
+}
+
 .btn-large {
   padding: 11px 19px;
   font-size: 21.25px;
@@ -3006,7 +3011,7 @@ button.close {
 
 .btn-large [class^="icon-"],
 .btn-large [class*=" icon-"] {
-  margin-top: 4px;
+  margin-top: 6px;
 }
 
 .btn-small {
@@ -3016,12 +3021,12 @@ button.close {
 
 .btn-small [class^="icon-"],
 .btn-small [class*=" icon-"] {
-  margin-top: 0;
+  margin-top: 2px;
 }
 
 .btn-mini [class^="icon-"],
 .btn-mini [class*=" icon-"] {
-  margin-top: -1px;
+  margin-top: 1px;
 }
 
 .btn-mini {
@@ -3351,7 +3356,7 @@ input[type="submit"].btn.btn-mini {
   *padding-top: 5px;
   padding-right: 8px;
   *padding-bottom: 5px;
-  padding-left: 8px;
+  padding-left: 5px;
 }
 
 .btn-group > .btn-mini + .dropdown-toggle {
@@ -3412,7 +3417,7 @@ input[type="submit"].btn.btn-mini {
 }
 
 .btn-large .caret {
-  margin-top: 6px;
+  margin-top: 9px;
 }
 
 .btn-large .caret {
@@ -3423,7 +3428,7 @@ input[type="submit"].btn.btn-mini {
 
 .btn-mini .caret,
 .btn-small .caret {
-  margin-top: 8px;
+  margin-top: 10px;
 }
 
 .dropup .btn-large .caret {
@@ -3555,8 +3560,9 @@ input[type="submit"].btn.btn-mini {
 .nav-header {
   display: block;
   padding: 3px 15px;
+  font-family: 'Trade Gothic W01 Bold 2', Arial, Helvetica, Verdana, sans-serif;
   font-size: 11px;
-  font-weight: bold;
+  font-weight: normal;
   line-height: 24px;
   color: #999999;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
@@ -3728,7 +3734,7 @@ input[type="submit"].btn.btn-mini {
 /* move down carets for tabs */
 
 .nav-tabs .dropdown-toggle .caret {
-  margin-top: 8px;
+  margin-top: 10px;
 }
 
 .nav .active .dropdown-toggle .caret {
@@ -4108,11 +4114,10 @@ input[type="submit"].btn.btn-mini {
   padding: 8px 15px 8px;
   color: #777777;
   text-decoration: none;
-  text-shadow: 0 1px 0 #ffffff;
 }
 
 .navbar .nav .dropdown-toggle .caret {
-  margin-top: 8px;
+  margin-top: 10px;
 }
 
 .navbar .nav > li > a:focus,
@@ -4398,26 +4403,27 @@ input[type="submit"].btn.btn-mini {
 }
 
 .breadcrumb {
-  padding: 8px 15px;
+  padding: 8px 0;
   margin: 0 0 24px;
+  font: normal 13px/16px 'Trade Gothic W01 Roman', Arial, Helvetica, Verdana, sans-serif;
   list-style: none;
-  background-color: #f5f5f5;
 }
 
 .breadcrumb > li {
   display: inline-block;
   *display: inline;
-  text-shadow: 0 1px 0 #ffffff;
+  /* IE7 inline-block hack */
+
   *zoom: 1;
+}
+
+.breadcrumb > li a {
+  color: black;
 }
 
 .breadcrumb > li > .divider {
   padding: 0 5px;
-  color: #ccc;
-}
-
-.breadcrumb > .active {
-  color: #999999;
+  color: black;
 }
 
 .pagination {

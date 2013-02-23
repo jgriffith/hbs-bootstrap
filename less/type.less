@@ -17,6 +17,7 @@ p {
 }
 
 
+
 // Emphasis & misc
 // -------------------------
 
@@ -26,6 +27,11 @@ small   { font-size: 85%; }
 strong  { font-weight: bold; }
 em      { font-style: italic; }
 cite    { font-style: normal; }
+
+b,strong {
+  font-weight: normal;
+  font-family: 'Trade Gothic W01 Bold 2',Arial, Helvetica, Verdana, sans-serif;
+}
 
 // Utility classes
 .muted               { color: @grayLight; }
@@ -145,7 +151,8 @@ dd {
   line-height: @baseLineHeight;
 }
 dt {
-  font-weight: bold;
+  font-weight: normal;
+  font-family: 'Trade Gothic W01 Bold 2',Arial, Helvetica, Verdana, sans-serif;
 }
 dd {
   margin-left: @baseLineHeight / 2;
