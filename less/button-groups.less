@@ -42,7 +42,7 @@
 .btn-group > .btn,
 .btn-group > .dropdown-menu,
 .btn-group > .popover {
-  font-size: @baseFontSize; // redeclare as part 2 of font-size inline-block hack
+  font-size: 13px; // redeclare as part 2 of font-size inline-block hack
 }
 
 // Reset fonts for other sizes
@@ -160,13 +160,14 @@
 
 // Reposition the caret
 .btn .caret {
-  margin-top: 8px;
-  margin-left: 0;
+  margin-top: 10px;
+  margin-left: 2px;
+  border-top-color: @white;
 }
 // Carets in other button sizes
 .btn-large .caret {
   margin-top: 6px;
-}
+} 
 .btn-large .caret {
   border-left-width:  5px;
   border-right-width: 5px;
